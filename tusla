@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+
+
+<html>
+<head><title> TULSA TINT SOLUTION </title>
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<script>
+  // Block Ctrl + mouse wheel zoom
+  window.addEventListener('wheel', function (e) {
+    if (e.ctrlKey) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+
+  // Block Ctrl + +, -, 0
+  window.addEventListener('keydown', function (e) {
+    if (e.ctrlKey && (
+      e.key === '+' ||
+      e.key === '-' ||
+      e.key === '=' ||
+      e.key === '0'
+    )) {
+      e.preventDefault();
+    }
+  });
+
+
+
+
+var blue = 0;
+var slo = 0;
+var opa = 0;
+var star = 0;
+var five = 0;
+
+function f1()
+{
+if(blue<=250)
+ {
+  document.getElementById("ani_main").style.right=blue+'px';
+  document.getElementById("ani_main").style.opacity=1;
+  
+	blue=blue+1;
+	setTimeout(f1,5);
+	f2();
+	
+		
+ }
+}
+
+function f2()
+
+{
+if(slo<=1000)
+ {
+  document.getElementById("slogan").style.left=slo+'px';
+
+  slo=slo+1;
+  setTimeout(f2,15);
+  f3();
+
+  }
+ }
+
+
+function f3()
+{
+if (opa<=300)
+	{
+   	document.getElementById("color_box").style.right=opa+'px';
+	
+	opa=opa+1;
+	setTimeout(f3,1000);
+        f4();
+	}
+}
+
+
+
+function f4()
+{
+if (star<=400)
+	{
+   	document.getElementById("ratings").style.right=star+'px';
+	
+	star=star+1;
+	setTimeout(f4,100);
+        f5();
+	}
+}
+
+
+
+function f5()
+{
+if(five<=125)
+   {
+    document.getElementById("five_star").style.right=five+'px';
+	
+	five=five+1;
+	setTimeout(f5,1000);
+   }
+}
+
+
+</script>
+
+
+
+
+<style>
+
+
+ html {
+      scroll-behavior: smooth;
+    }
+
+    section {
+      height: 100vh;
+    }
+
+
+body
+{
+background-color:white;
+}
+
+
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+
+#banner
+{
+position:fixed;
+height:5%;
+width:100%;
+top:0%;
+left:0%;
+background:#03188e;
+z-index:2;
+}
+
+#tel_logo
+{
+position:absolute;
+height:35px;
+width:35px;
+left:15%;
+top:8%;
+overflow:auto;
+}
+
+
+#num
+{
+color:white;
+position:absolute;
+left:18%;
+top:30%;
+overflow:auto;
+}
+
+#fblogo
+{
+position:absolute;
+height:48px;
+width:75px;
+left:80%;
+top:0%;
+overflow:auto;
+}
+
+
+#nav
+{
+position:fixed;
+top:5%;
+left:0%;
+height:20%;
+width:100%;
+background:#e8e8e8;
+border-bottom:1px solid #03188e;
+z-index:2;
+}
+
+#logo
+{
+position:absolute;
+top:0%;
+left:18%;
+height:100%;
+width:200px;
+z-index:2;
+}
+
+#about_navbar
+{
+height:20%;
+width:10%;
+border-bottom:1px solid orange;
+position:absolute;
+left:30%;
+top:25%;
+text-align:center;
+padding-bottom:12px;
+font-family:verdana;
+}
+
+
+#services_navbar
+{
+height:20%;
+width:10%;
+border-bottom:1px solid orange;
+position:absolute;
+left:40%;
+top:25%;
+text-align:center;
+padding-bottom:12px;
+font-family:verdana;
+}
+
+
+#projects_navbar
+{
+height:20%;
+width:10%;
+border-bottom:1px solid orange;
+position:absolute;
+left:50%;
+top:25%;
+text-align:center;
+padding-bottom:12px;
+font-family:verdana;
+}
+
+
+#main_content
+{
+position:absolute;
+width:100%;
+height:100%;
+left:0%;
+top:0%;
+}
+
+#slogan
+{
+position:absolute;
+width:40%;
+height:50%;
+left:-600px;
+top:25%;
+font-size:45px;
+font-family:"Outfit",sans-serif;
+font-weight:700;
+line-height:1.2em;
+color:white;
+z-index:1;
+}
+
+
+#ani_main
+{
+position:absolute;
+height:60%;
+width:8%;
+background:blue;
+top:30%;
+right:-150px;
+opacity:0;
+}
+
+
+#ratings
+{
+position:absolute;
+right:-500px;
+top:80%;
+height:5%;
+width:25%;
+border-left:10px solid red;
+
+}
+
+
+#color_box
+{
+position:absolute;
+right:-250px;
+top:80%;
+height:5%;
+width:10%;
+background:red;
+}
+
+
+#five_star
+{
+position:absolute;
+right:-760px;
+top:70%;
+height:10%;
+width:40%;
+font-size:35px;
+font-family:"Outfit",sans-serif;
+font-weight:400;
+line-height:1.2em;
+color:red;
+}
+
+
+
+#about_target
+{
+position:absolute;
+top:105%;
+width:100%;
+height:100%;
+left:0%;
+}
+
+#first_image
+{
+position:absolute;
+top:26%;
+left:20%;
+width:25%;
+height:70%;
+border:10px solid orange;
+}
+
+#second_image
+{
+position:absolute;
+top:60%;
+left:15%;
+width:15%;
+height:30%;
+border:10px solid white;
+background:blue;
+z-index:1;
+}
+
+#about_content
+{
+position:absolute;
+top:25%;
+left:48%;
+width:40%;
+height:70%;
+z-index:1;
+background-image:url('https://i.pinimg.com/736x/05/d0/5c/05d05ca344fd3e300f66558b2b90fa5c.jpg');
+background-repeat:no-repeat;
+background-size:200px 200px;
+}
+
+
+#promise
+{
+position:absolute;
+top:25%;
+font-size:50px;
+font-family:"Outfit",sans-serif;
+font-weight:700;
+}
+
+#promise_content
+{
+position:absolute;
+width:100%;
+height:50%;
+right:0px;
+top:55%;
+font-size:20px;
+font-family:"Outfit",sans-serif;
+color:gray;
+z-index:1;
+border:1px solid transparent;
+line-height:1.5em;
+padding-right:20px;	
+}
+
+
+
+#how_we_work
+{
+position:absolute;
+width:100%;
+height:80%;
+right:0px;
+top:210%;
+font-size:20px;
+font-family:"Outfit",sans-serif;
+color:gray;
+z-index:1;
+border:3px solid transparent;	
+}
+
+
+#work
+{
+position:absolute;
+width:20%;
+height:70%;
+left:250px;
+top:0%;
+font-size:20px;
+font-family:"Outfit",sans-serif;
+color:white;
+z-index:1;
+border:3px solid transparent;
+background:#03188e;
+padding-right:30%;
+padding-left:3%;
+padding-top:3%;	
+line-height:1.5em;
+}
+
+
+#project_eva
+{
+position:absolute;
+width:12%;
+height:50%;
+left:750px;
+top:10%;
+font-size:20px;
+font-family:"Outfit",sans-serif;
+color:white;
+z-index:1;
+border:3px solid transparent;
+background:#3985f7;
+padding-right:2%;
+padding-left:2%;
+padding-top:0%;	
+padding-bottom:2%;
+line-height:1.5em;
+font-weight:10;
+}
+
+#project_exe
+{
+position:absolute;
+width:12%;
+height:50%;
+left:1100px;
+top:10%;
+font-size:20px;
+font-family:"Outfit",sans-serif;
+color:white;
+z-index:1;
+border:3px solid transparent;
+background:#3985f7;
+padding-right:2%;
+padding-left:2%;
+padding-top:0%;	
+padding-bottom:2%;
+line-height:1.5em;
+font-weight:10;
+}
+
+
+#quality_ass
+{
+position:absolute;
+width:12%;
+height:50%;
+left:1450px;
+top:10%;
+font-size:20px;
+font-family:"Outfit",sans-serif;
+color:white;
+z-index:1;
+border:3px solid transparent;
+background:#3985f7;
+padding-right:2%;
+padding-left:2%;
+padding-top:0%;	
+padding-bottom:2%;
+line-height:1.5em;
+font-weight:10;
+}
+
+
+
+#services_target
+{
+position:absolute;
+top:260%;
+width:100%;
+height:100%;
+left:0%;
+padding-top:10%;
+border:3px solid orange;
+background:#e8e8e8;
+
+}
+
+#solar_services
+{
+position:absolute;
+top:20%;
+width:30%;
+height:10%;
+left:35%;
+text-align:center;
+font-size:40px;
+font-family:verdana;
+padding-bottom:3%;
+font-weight:700;
+background:white;
+}
+
+#windows_film
+{
+position:absolute;
+top:40%;
+width:20%;
+height:20%;
+left:10%;
+text-align:center;
+font-size:40px;
+font-family:san-serif;
+padding-bottom:3%;
+font-weight:700;
+background:#e8e8e8;
+background-image:url("https://patriotssc.com/wp-content/uploads/elementor/thumbs/Window-Films-for-Homes-or-Offices-qcgufpxvlozbr697xsa99xtzu2nsdxj0i8ex6kek5k.webp");
+background-size:100% 100%;
+border:10px solid white;
+}
+
+#security_film
+{
+position:absolute;
+top:40%;
+width:20%;
+height:20%;
+left:40%;
+text-align:center;
+font-size:40px;
+font-family:verdana;
+padding-bottom:3%;
+font-weight:700;
+background:blue;
+background-image:url("https://patriotssc.com/wp-content/uploads/elementor/thumbs/Window-Security-Films-scaled-qcgujotcgiewrwhori1jsxs24n3kvxa7pvkq4mipvs.jpeg");
+background-size:100% 100%;
+border:10px solid white;
+}
+
+#decorative_film
+{
+position:absolute;
+top:40%;
+width:20%;
+height:20%;
+left:70%;
+text-align:center;
+font-size:40px;
+font-family:verdana;
+padding-bottom:3%;
+font-weight:700;
+background:blue;
+background-image:url("https://windowfilmworld.com/cdn/shop/products/FAB10339_Room_grande.jpg?v=1523473367");
+background-size:100% 100%;
+border:10px solid white;
+}
+
+#roller_shades
+{
+position:absolute;
+top:80%;
+width:20%;
+height:20%;
+left:10%;
+text-align:center;
+font-size:40px;
+font-family:verdana;
+padding-bottom:3%;
+font-weight:700;
+background:blue;
+background-image:url("https://www.altawindowfashions.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fe1syw5oe%2Fproduction%2Fdc596c96d50db95a1ca2e1e55f9c7b036eeec0b3-2048x1152.webp&w=3840&q=75");
+background-size:100% 100%;
+border:10px solid white;
+}
+
+
+#windows_covering
+{
+position:absolute;
+top:80%;
+width:20%;
+height:20%;
+left:40%;
+text-align:center;
+font-size:40px;
+font-family:verdana;
+padding-bottom:3%;
+font-weight:700;
+background:blue;
+background-image:url("https://patriotssc.com/wp-content/uploads/elementor/thumbs/patriot-window-tint-solar-control-9-qccl9le760k3abtyk9vg3erugd35bitudubyac95s8.jpeg");
+background-size:100% 100%;
+border:10px solid white;
+}
+
+#motorized_patio
+{
+position:absolute;
+top:80%;
+width:20%;
+height:20%;
+left:70%;
+text-align:center;
+font-size:40px;
+font-family:verdana;
+padding-bottom:3%;
+font-weight:700;
+background:blue;
+background-image:url("https://www.customshadeandshutter.com/wp-content/uploads/2021/09/banner-alfresco.jpg");
+background-size:100% 100%;
+border:10px solid white;
+}
+
+#windows_box
+{
+position:absolute;
+top:63%;
+width:16%;
+height:10%;
+left:12%;
+text-align:center;
+font-size:20px;
+padding-bottom:0%;
+font-weight:0;
+background:#e8e8e8;
+border:10px solid white;
+font-family: "Montserrat", sans-serif;
+overflow:none;
+}
+
+#security_box
+{
+position:absolute;
+top:63%;
+width:16%;
+height:10%;
+left:42%;
+text-align:center;
+font-size:20px;
+padding-bottom:0%;
+font-weight:0;
+background:#e8e8e8;
+border:10px solid white;
+font-family: "Montserrat", sans-serif;
+overflow:none;
+}
+
+#decorative_box
+{
+position:absolute;
+top:63%;
+width:16%;
+height:10%;
+left:72%;
+text-align:center;
+font-size:20px;
+padding-bottom:0%;
+font-weight:0;
+background:#e8e8e8;
+border:10px solid white;
+font-family: "Montserrat", sans-serif;
+overflow:none;
+}
+
+#roller_box
+{
+position:absolute;
+top:103%;
+width:16%;
+height:10%;
+left:12%;
+text-align:center;
+font-size:20px;
+padding-bottom:0%;
+font-weight:0;
+background:#e8e8e8;
+border:10px solid white;
+font-family: "Montserrat", sans-serif;
+overflow:none;
+}
+
+#wind_box
+{
+position:absolute;
+top:103%;
+width:16%;
+height:10%;
+left:42%;
+text-align:center;
+font-size:20px;
+padding-bottom:0%;
+font-weight:0;
+background:#e8e8e8;
+border:10px solid white;
+font-family: "Montserrat", sans-serif;
+overflow:none;
+}
+
+#motorized_box
+{
+position:absolute;
+top:103%;
+width:16%;
+height:10%;
+left:72%;
+text-align:center;
+font-size:20px;
+padding-bottom:0%;
+font-weight:0;
+background:#e8e8e8;
+border:10px solid white;
+font-family: "Montserrat", sans-serif;
+overflow:none;
+}
+
+</style>
+
+
+</head>
+<body onLoad="f1()">
+
+
+<div id = "banner">
+<span id= "num">0123456789</span>
+
+<image  id = "tel_logo" src ="https://png.pngtree.com/png-clipart/20250103/original/pngtree-blue-phone-logo-png-element-png-image_5450431.png">
+<a href ="https://www.facebook.com">
+<image id = "fblogo" src="https://www.cvoice24.com/media/imgAll/2021February/Facebook-2106131405.png"></a>
+  </div>
+
+
+
+<div id="nav">
+	<image id ="logo"src = "https://i.pinimg.com/736x/05/d0/5c/05d05ca344fd3e300f66558b2b90fa5c.jpg">
+			
+  <div id="about_navbar"><a href ="#about_target"><p>ABOUT</p></a>
+  </div>
+  
+
+  <div id="services_navbar"><a href ="#services_target"><p>SERVICES</p></a>
+  </div>
+  
+  <div id="projects_navbar"><a href =""><p>PROJECTS</p></a>
+  </div>
+</div>
+
+<div id= "main_content">
+<image id= "about_tint" src = "https://www.windowtintingsolutions.com.au/wp-content/uploads/2015/09/Residential-Home-House-window-tinting-Melbourne.jpg" height="100%" width="100%">
+<div id ="slogan">
+<p>Professional Window</p>
+<p>Tinting, Interior Shades,</p>
+<p>and Motorized Patio Shades</p>
+<p>for Your Home or Office</p>
+</div>
+
+<div id="ani_main">
+   </div>
+
+<div id = "ratings">
+	<image src="https://as2.ftcdn.net/v2/jpg/15/66/41/17/1000_F_1566411742_lhZrwSDohQcnjTzRXjbGjoAg7N4KidWf.webp" height="100%" width="15%">
+	<image src="https://as2.ftcdn.net/v2/jpg/15/66/41/17/1000_F_1566411742_lhZrwSDohQcnjTzRXjbGjoAg7N4KidWf.webp" height="100%" width="15%">
+	<image src="https://as2.ftcdn.net/v2/jpg/15/66/41/17/1000_F_1566411742_lhZrwSDohQcnjTzRXjbGjoAg7N4KidWf.webp" height="100%" width="15%">
+	<image src="https://as2.ftcdn.net/v2/jpg/15/66/41/17/1000_F_1566411742_lhZrwSDohQcnjTzRXjbGjoAg7N4KidWf.webp" height="100%" width="15%">
+	<image src="https://as2.ftcdn.net/v2/jpg/15/66/41/17/1000_F_1566411742_lhZrwSDohQcnjTzRXjbGjoAg7N4KidWf.webp" height="100%" width="15%">
+   </div>
+
+
+<div id = "color_box">
+   </div>
+
+<div id="five_star">
+	<p id="quote_ratings">Five Star Services Everytime</a>
+  </div>
+
+
+</div>
+
+
+
+</br></br>
+
+
+
+ <section></section>
+		<section id ="about_target">
+		<div id="first_image">
+			<image src="https://patriotssc.com/wp-content/uploads/elementor/thumbs/patriot-window-tinting-qc5ed5ahxz51izy738xrxzwsbbl21tqm2r8hmrguhw.jpeg" height = "100%" width ="100%"></div>
+                  <div id="second_image">
+			<image src="https://patriotssc.com/wp-content/uploads/elementor/thumbs/Glover1-scaled-qyeul1m6q411nogg0hh8z15hqcxdfginklnh147jc0.jpg" height = "100%" width ="100%"></div>
+
+		<image src = "">
+
+
+
+		<div id="about_content">
+				<p id="promise">Our Promise To You</p>
+		
+				<div id="promise_content">
+				<p>At Window Tinting Service & Solar Control,
+				 we’re more than just a service provider;
+				 we’re your partner in creating comfortable and energy-efficient spaces.
+				 Specializing in professional window tinting,
+				 interior shades, and motorized patio shades,
+				 we offer customized solar control solutions for both homes and offices.
+				 With over 20 years of industry experience, our commitment to on-time service,
+				 quality craftsmanship, and fair pricing sets us apart.
+				 Your trust is important to us, which is why we always stand behind
+			         our products and services for an unparalleled service experience.</p>
+				</div>
+			
+			</div>
+    </section>
+
+   <div id="how_we_work">
+		<div id="work"><h1>How We Work</h1>
+<p>At Window Tinting  Service & Solar Control, we streamline your project from start to finish.
+First, we evaluate your needs and provide expert recommendations.
+Then, our skilled installation professionals execute the plan to perfection.
+Finally, we conduct a quality check to ensure everything meets your standards. 
+Trust us for seamless, high-quality solar and window solutions.</a>
+		</div>
+
+		<div id="project_eva">
+			<p> 01</p></br>
+                           <h3> Project Evaluation</h3>
+				</br>
+                           <p> We’ll discuss your requirements, 
+                            assess the scope of work, 
+                            and provide expert insights and recommendations.</p>
+		</div>
+		<div id="project_exe">
+			<p> 02</p></br>
+                           <h3> Project Execution</h3>
+				</br>
+                           <p> Once we’ve planned the project, our skilled installation professionals get to work.</p>
+		</div>
+                <div id="quality_ass">
+			<p> 03</p></br>
+                           <h3> Quality Assurance</h3>
+				</br>
+                           <p> After completion, we conduct a thorough inspection to ensure everything meets your expectations.</p>
+		</div>
+
+	</div>
+
+
+
+
+
+   </br></br>
+ 
+		<section id ="services_target"><image src = "">
+			<div id="solar_services"><p>Our Solar & Shade Services</p>
+				</div>
+
+			<div id="services_film">
+			</div>
+
+			<div id="windows_film">
+			</div>
+			
+			<div id="security_film">
+			</div>
+
+			<div id="decorative_film">
+			</div>
+
+			<div id="roller_shades">
+			</div>
+
+			<div id="windows_covering">
+			</div>
+
+			<div id="motorized_patio">
+			</div>
+
+			
+				<div id="windows_box">
+					<h2>Windows Films</h2>
+					<p style="color:gray;">Energy-Saving & UV-blocking</p>
+				</div>
+
+				<div id="security_box">
+					<h2>Security Films</h2>
+					<p style="color:gray;">Protection & Privacy</p>
+				</div>
+
+				<div id="decorative_box">
+					<h2>Decorative Films</h2>
+					<p style="color:gray;">Style with Enhance Privacy</p>
+				</div>
+
+				<div id="roller_box">
+					<h2>Roller Shades</h2>
+					<p style="color:gray;">Manual, Light Filtering</p>
+				</div>
+
+				<div id="wind_box">
+					<h2>Windows Covering</h2>
+					<p style="color:gray;">Motorized, Light Filtering</p>
+				</div>
+
+				<div id="motorized_box">
+					<h2>Motorized Patio Shades</h2>
+					<p style="color:gray;"></p>
+				</div>
+
+					
+    </section>
+
+
+
+</body>
+</html>

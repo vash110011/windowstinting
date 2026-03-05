@@ -1,0 +1,1755 @@
+html 
+{
+scroll-behavior:smooth;
+}
+
+
+/* ==== GLOBAL STYLES ==== */
+
+html {
+        font-size: 16px;
+        scroll-behavior: smooth;
+    }
+
+ body {
+        margin-top:0%;
+        font-family: Arial, Helvetica  sans-serif;
+	background-color:black;
+    }
+
+
+a {
+        color: black;
+        text-decoration: none;
+    }
+
+    section {
+        min-height: 100vh;
+    }
+
+/*  WHOLE - CONTENT */
+
+    #whole {
+        width: 100%;
+        background: yellow;
+	margin-top:5%;
+	height:250vh;
+	flex-direction:column;
+    }
+
+        /* ==== MOBILE ==== */
+@media screen and (max-width: 768px) {
+        
+        #whole{
+                width:460px;
+		flex-direction:row;
+	       }
+
+	section {
+        min-height: 50vh;
+		}
+}
+    
+/* === TABLET === */
+@media screen and (min-width: 768px)
+ and (max-width: 1024px) {
+         #whole{
+                 width:100%;
+   
+}}
+
+        
+
+
+/* ==== NAVBAR ==== */
+
+    #nav {
+    position: fixed;
+    top: 0px;
+    left:50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 100vw;   /* 👈 controls navbar width */
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #e8e8e8;
+    z-index: 99;
+    padding-left:0%;
+}
+		
+ 
+
+.nav-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:content;
+    padding-left:10px;
+    margin-right: 0px; /* pushes links left */
+	height:8vh;
+
+}
+
+.nav-logo {
+    flex-shrink: 0; /* prevents logo from shrinking or wrapping */
+		border-radius:50%;
+		
+}
+
+.nav-logo img{
+		height:100%;
+		widthL100%;
+		}
+
+
+/* === MOBILE === */
+@media screen and (max-width: 768px) {
+    #nav {
+        flex-direction: column;
+        gap: 0.2rem;
+        max-width: 100%;
+	height:20vh;
+
+    }
+
+    .nav-links {
+        margin:0;
+	width:100%;
+    }
+
+	.nav-logo{
+		display:block;
+		}
+}
+
+
+    #nav a {
+        font-size: 0.8rem;
+        font-weight: 150;
+        padding: 0.3rem 0.5rem;
+        border-bottom: 2px solid transparent;
+        transition: all 0.3s;
+	margin:auto;
+    }
+
+    #nav a:hover {
+        border-bottom: 1px solid orange;
+        color: orange;
+    }
+
+    #nav a.active {
+        background-color: orange;
+        color: white;
+        border-bottom: none;
+    }
+
+    #logo {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    padding-left:0;
+    margin:auto;
+}
+
+
+
+/* === TABLET === */
+@media screen and (min-width: 768px)
+ and (max-width: 1024px) {
+	#nav{
+        flex-direction: column;
+        gap: 0.4rem;
+        max-width: 100%;
+	height:15vh;
+            }
+
+    .nav-links {
+        margin:0;
+	width:60%;
+               }
+
+	.nav-logo{
+		position:absolute;
+		display:block;
+		left:10%;
+		}
+
+    #nav a {
+        font-size: 0.8rem;
+        font-weight: 150;
+        padding: 0.2rem 0.6rem;
+        border-bottom: 2px solid transparent;
+        transition: all 0.3s;
+	margin:auto;
+   	   }
+
+    #nav a:hover {
+        border-bottom: 1px solid orange;
+        color: orange;
+                 }
+
+    #nav a.active {
+        background-color: orange;
+        color: white;
+        border-bottom: none;
+    		  }
+
+    #logo {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    padding-left:0;
+    margin:auto;
+	  }
+}
+
+		
+
+
+
+/* ==== MAIN - CONTENT === */
+
+
+#main-content-target{
+	margin-top:5%;
+	height:100vh;
+	background-image:url("images/tulsa main background.png");
+	border-bottom:5px solid darkred;
+	background-repeat:no-repeat;
+	width:100%;
+	
+
+	
+}
+
+
+/* ==== MOBILE MAIN CONTENT ==== */
+@media screen and (max-width: 767px){
+    #main-content-target {
+	margin-top:15vh;
+	display:flex;
+        width:100vw;
+	height:50vh;
+	background-size:100% 100%;
+	border-bottom:3px solid darkred;
+		    }
+
+	
+
+
+}
+/* === TABLET MAIN CONTENT === */
+@media screen and (min-width: 768px)
+ and (max-width: 1024px) {
+   .main-content {
+	margin-top:5vh;
+        width:100vw;
+	height:100vh;
+	background-size:100% 100%;
+	border-bottom:3px solid darkred;
+}
+}
+
+
+
+
+
+
+
+
+/* ==== SLOGAN  ==== */
+
+
+.slogan{
+	position:absolute;
+	height:40%;
+	width:50vh;
+	left:60vw;
+	top:28%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	padding:1rem;
+	animation-name:slogan;
+	animation-duration:3s;
+	z-index:2;
+
+
+}
+   
+	@keyframes slogan{
+	0%{opacity:0;left:0%};
+	25%{opacity:0.25};
+	50%{opacity:0.5};
+	75%{opacity:0.75};
+	100%{opacity:1;left:60%};}
+
+
+      .slogan p{
+           font-size:1.8rem;
+	   color:white;
+	   line-height:3rem;
+	   font-family:"Outfit",sans-serif;
+	}
+
+
+
+/* === MOBILE SLOGAN === */
+@media screen and (max-width: 767px) {
+
+      .slogan{
+		width:40%;
+		height:200px;
+		left:45vw;
+		top:28vh;	
+        	}
+		
+	
+
+	.slogan p{
+		font-size:0.9rem;
+		line-height:1.2rem;
+		}
+	}
+
+/* === TABLET SLOGAN === */
+@media screen and (min-width: 768px)
+ and (max-width: 1024px) {
+
+      .slogan{
+        	top:25vh;
+		width:40vh;
+		height:30vh;
+		left:45vw;	
+        	}
+		
+	
+
+	.slogan p{
+		font-size:1.4rem;
+		line-height:2rem;
+		}
+	}
+
+
+
+/* === SLOGAN PC === */
+@media screen and (min-width: 1025px)  and (max-width: 1919px) {
+
+		.slogan{
+		width:30%;
+		height:200px;
+		left:55vw;
+		top:30vh;	
+        	}
+		
+	
+
+	.slogan p{
+		font-size:1.4rem;
+		line-height:2rem;		
+		}
+	}
+
+
+
+/* === BLUE BOX === */
+.blue-box{
+	position:absolute;
+	top:30%;
+	width:12%;
+	height:57%;
+        left:75vw;
+	background-color:blue;
+	z-index:1;
+	animation-name:blue-box;
+	animation-duration:3s;
+	transform:skewY(350deg);
+}
+
+	@keyframes blue-box{
+	0%{opacity:0;left:0vw};
+	25%{opacity:0.1};
+	50%{opacity:0.3};
+	75%{opacity:0.5};
+	100%{opacity:1;left:80vw};}
+
+/* ==== MOBILE BLUE BOX ==== */
+@media screen and (max-width: 768px) {
+    .blue-box {
+	top:32%;
+	height:25vh;
+	width:100px;
+	left:75vw;
+    }}
+
+
+/* === TABLET BLUE BOX=== */
+@media screen and (min-width: 768px)
+ and (max-width: 1024px) {
+   .blue-box {
+    	top:25vh;
+	height:45vh;
+	width:120px;
+	left:75vw;
+}}
+
+
+
+/* === RATING's BOX === */
+.ratings-box{
+	position:absolute;
+	height:8%;
+	width:30%;
+	left:59%;
+	top:65%;
+	z-index:2;
+	animation-name:ratings-box;
+	animation-duration:2s;
+}
+	.ratings-box p{
+		color: orange;
+		font-size:2.5rem;
+    		}
+
+	@keyframes ratings-box{
+	0%{opacity:0;top:100%};
+	25%{opacity:0.25};
+	50%{opacity:0.5};
+	75%{opacity:0.75};
+	100%{opacity:1;top:45%};}
+
+
+/* ==== MOBILE ==== */
+@media screen and (max-width: 768px) {
+    .ratings-box {
+	position:absolute;
+	top:48vh;
+	height:2vh;
+	width:250px;
+	flex-direction:column;
+	left:47vw;
+		}
+
+
+    .ratings-box p{
+	position:absolute;
+	font-size:1rem;
+		  }
+
+    @keyframes ratings-box{
+	0%{opacity:0;top:50%};
+	25%{opacity:0.25};
+	50%{opacity:0.5};
+	75%{opacity:0.75};
+	100%{opacity:1;top:45%};
+			   }
+
+    }
+
+
+/* === RATINGS TABLET === */
+@media screen and (min-width: 768px)
+ and (max-width: 1024px) {
+   .ratings-box{
+        position:absolute;
+	font-size:1.2rem;
+        width:300px;
+	top:58vh;
+	left:47vw;
+		}
+	
+	.ratings-box p{
+	font-size:1.2rem;
+		}
+
+}
+
+/* === RATINGS PC === */
+@media screen and (min-width: 1025px)and (max-width:1919px){
+   .ratings-box{
+        position:absolute;
+	font-size:0.5rem;
+        width:400px;
+	top:68vh;
+	left:57vw;
+	
+
+		}
+	.ratings-box p
+	{
+	font-size:1.8rem;
+	}
+}
+
+
+/* === 5 STARS BOX === */
+.five-stars-box{
+	position:absolute;
+	height:5%;
+	width:20%;
+	left:59%;
+	top:80%;
+	z-index:2;
+	border-left:10px solid darkred;
+	border-right:200px solid darkred;
+	animation-name:five-stars-box;
+	animation-duration:3s;
+}
+
+	@keyframes five-stars-box{
+	0%{opacity:0;top:100%};
+	25%{opacity:0.25};
+	50%{opacity:0.5};
+	75%{opacity:0.75};
+	100%{opacity:1;top:80%};}
+
+.five-stars-box img
+	{
+	height:100%;
+	width:18%;
+	}
+
+/* ==== MOBILE 5 STARS ==== */
+@media screen and (max-width: 768px) {
+    .five-stars-box {
+	position:absolute;
+	height:2vh;
+	width:180px;
+	border-right:30px solid darkred;
+	flex-direction:column;
+	border-left:5px solid darkred;
+	top:53%;
+	left:47vw;
+  	z-index:2;
+		    }
+
+	@keyframes five-stars-box{
+	0%{opacity:0;top:60%};
+	25%{opacity:0.25};
+	50%{opacity:0.5};
+	75%{opacity:0.75};
+	100%{opacity:1;top:80%};
+		                 }
+
+}
+
+
+/* === TABLET 5 STARS === */
+@media screen and (min-width: 768px)
+ and (max-width: 1024px) {
+   .five-stars-box {
+           position:absolute;
+           height:20px;
+           top:65vh;
+           width:200px;
+           border-right:100px solid darkred;
+	   left:47vw;
+	  
+           
+    }
+}
+
+
+/* === PC 5 STARS === */
+@media screen and (min-width: 1025px)
+ and (max-width: 1919px) {
+   .five-stars-box {
+           position:absolute;
+           height:20px;
+           top:80vh;
+           width:200px;
+           border-right:100px solid darkred;
+	   left:57vw;
+	  
+           
+    }
+}
+
+
+
+/* === ABOUT-TARGET === */
+
+#about-target
+{
+position:absolute;
+width:100%;
+height:100vh;
+border-bottom:3px solid orange;
+background-image:url("images/background.jpg");
+background-repeat:no-repeat;
+
+}
+
+
+	
+	
+
+
+/* ==== MOBILE ==== */
+@media screen and (max-width: 768px) {
+  #about-target{
+
+	
+        width:100%;
+	height:50vh;
+	background-size:100% 100%;
+	border-bottom:3px solid darkred;
+	width:100vw;
+		}
+
+	
+
+}
+
+/* === TABLET === */
+@media screen and (min-width: 768px)
+ and (max-width: 1024px) {
+	#about-target{
+  
+    }}
+
+/* ===== TULSA H1 ====*/
+.tulsa-h1
+	{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	position:absolute;
+	top:2vh;
+	right:4vw;
+	height:30vh;
+	width:40vw;
+	animation-name:tulsa;
+	animation-duration:2s;
+	border-right:100px solid gray;
+	z-index:1;
+	}
+
+.tulsa-h1 h1
+	{
+	color:orange;
+	font-size:3rem;
+}
+
+
+/* ===== MOBILE TULSA H1 ====*/
+@media screen and (max-width: 768px) {
+  .tulsa-h1{
+
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	position:absolute;
+	top:2vh;
+	left:51vw;
+	height:10vh;
+	width:40vw;
+	animation-name:tulsa;
+	animation-duration:2s;
+	border-right:20px solid gray;
+	z-index:1;
+	}
+
+
+
+.tulsa-h1 h1
+	{
+	color:orange;
+	font-size:0.9rem;
+}
+}
+
+
+/* ===== TABLET TULSA H1 ====*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  	.tulsa-h1{
+
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	position:absolute;
+	top:10vh;
+	right:5vw;
+	height:10vh;
+	width:40vw;
+	animation-name:tulsa;
+	animation-duration:2s;
+	border-right:30px solid gray;
+	z-index:1;
+	}
+
+
+
+.tulsa-h1 h1
+	{
+	color:orange;
+	font-size:1.2rem;
+	}
+}
+
+
+/* ===== PC TULSA H1 ====*/
+@media screen and (min-width: 1025px) and (max-width: 1919px){
+  	.tulsa-h1{
+
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	position:absolute;
+	top:5vh;
+	right:12vw;
+	height:10vh;
+	width:35vw;
+	animation-name:tulsa;
+	animation-duration:2s;
+	border-right:20px solid gray;
+	z-index:1;
+	}
+
+
+
+.tulsa-h1 h1
+	{
+	color:orange;
+	font-size:1.6rem;
+	}
+}
+
+
+
+
+/* === IMAGE-ONE === */
+
+.image-one
+{
+position:absolute;
+top:20%;
+width:30%;
+height:60vh;
+left:15%;
+border:10px solid white;
+}
+
+	.image-one img
+		{
+		height:100%;
+		width:100%;
+		}
+   	
+	
+
+/* ==== MOBILE ==== */
+@media screen and (max-width: 768px) {
+  .image-one{
+	top:20%;
+	width:40%;
+	height:30vh;
+	left:5%;
+	border:3px solid white;
+ 
+}}
+
+
+/* === TABLET === */
+@media screen and (min-width: 768px)
+ and (max-width: 1024px) {
+	.image-one{
+  
+    }}
+
+
+
+
+/* === IMAGE-TWO === */
+
+.image-two
+{
+position:absolute;
+top:40%;
+width:15%;
+height:30vh;
+left:10%;
+border:10px solid white;
+}
+   	
+	.image-two img
+		{
+		height:100%;
+		width:100%;
+		}	
+		   
+
+/* ==== INAGE ONE MOBILE ==== */
+@media screen and (max-width: 768px) {
+  .image-two{
+	top:40%;
+	width:15%;
+	height:15vh;
+	left:2%;
+	top:40%;
+	border:3px solid white;
+	
+	
+ 
+}}
+
+/* === IMAGE TWO TABLET === */
+@media screen and (min-width: 768px)
+ and (max-width: 1024px) {
+	.image-two{
+  
+    }}
+
+
+/* === ABOUT-PROMISE === */
+
+.about-promise
+{
+position:absolute;
+top:25vh;
+width:35%;
+height:60vh;
+left:50vw;
+padding:0.5rem;
+}
+   .about-promise p, h2
+	{
+	margin-top:4rem;
+	color:gray;
+	font-size:1.4rem;
+	line-height:2rem;
+	}	
+	
+		   
+
+/* ==== PROMISE MOBILE ==== */
+@media screen and (max-width: 768px) {
+  .about-promise{
+	position:absolute;
+	top:20%;
+	width:45%;
+	height:30vh;
+	left:50%;
+		}
+
+	.about-promise p, h2
+	{
+	margin-top:0rem;
+	font-size:0.8rem;
+	line-height:1rem;
+	}	
+}
+
+/* === PROMISE TABLET === */
+@media screen and (min-width: 768px)
+ and (max-width: 1024px) {
+	.about-promise{
+	position:absolute;
+	top:20%;
+	width:45%;
+	height:30vh;
+	left:50%;
+		}
+
+	.about-promise p
+	{
+	margin-top:0rem;
+	font-size:1rem;
+	line-height:1.2rem;
+	}	
+}
+ 
+
+/* === PROMISE PC === */
+@media screen and (min-width: 1025px) and (max-width: 1919px){
+	.about-promise{
+	position:absolute;
+	top:12vh;
+	width:45%;
+	height:30vh;
+	left:50%;
+		}
+
+	.about-promise p, h2
+	{
+	margin-top:4rem;
+	font-size:1.2rem;
+	line-height:1.4rem;
+	
+	}	
+}
+ 
+
+/* === ANIMATION-BOX === */
+
+.animation_opacity
+	{
+	height:10%;
+	width:5%;
+	opacity:0;
+	background-color:gold;
+	position:absolute;
+	right:10%;
+	top:10%;
+	z-index:99;
+	animation-name:animation_opacity;
+	animation-duration:30s;
+	animation-iteration-count:infinite;
+	}
+
+		
+		@keyframes animation_opacity
+		{
+		0%{opacity:0.0; right:10%;top:30%;}	
+		10%{opacity:0.1;right:45%;top:30%;height:10%;width:5%;}
+		20%{opacity:0.2;right:45%;top:50%;height:15%;width:8%;}
+		30%{opacity:0.0;right:100%;top:50%;height:15%;width:8%;}
+		40%{opacity:0.0;right:100%;top:60%;height:15%;width:8%;}
+		50%{opacity:0.1;right:10%;top:60%;height:15%;width:8%;}
+		60%{opacity:0.2;right:10%;top:80%;height:15%;width:8%;}
+		70%{opacity:0.3;right:30%;top:80%;height:15%;width:8%;}
+		80%{opacity:0.1;right:30%;top:30%;}
+		90%{opacity:0.0;right:10%;top:30%;}
+		100%{opacity:0.0;right:10%;top:30%;}
+		}
+
+
+/* ==== HOW WE WORK ==== */
+
+.how_we_work
+{
+position:absolute;
+width:100%;
+height:100vh;
+right:0px;
+top:200vh;
+font-size:2rem;
+font-family:"Outfit",sans-serif;
+color:gray;
+left:0.4%;
+z-index:1;
+background-image:url("images/window_film.png");
+background-size:100% 100%;
+background-repeat:no-repeat;
+}
+	
+
+	
+
+	.work
+	{
+	position:absolute;
+	top:23vh;
+	width:30vw;
+	font-size:1.4rem;
+	left:2vw;
+	color:gray;
+	}
+	
+	.work h2
+	{
+	font-size:1.4rem;
+	color:gray;
+	}
+
+	.project_eva
+	{
+	position:absolute;
+	width:20%;
+	height:40%;
+	left:36%;
+	top:30%;
+	font-size:1.4rem;
+	font-family:"Outfit",sans-serif;
+	color:gray;
+	z-index:1;
+	border-left:3px solid gray;
+	line-height:1.2em;
+	overflow:hidden;
+	padding-left:1.2rem;
+	}
+
+	.project_exe
+	{
+	position:absolute;
+	width:20%;
+	height:40%;
+	left:58%;
+	top:30%;
+	font-size:1.4rem;
+	font-family:"Outfit",sans-serif;
+	color:gray;
+	z-index:1;
+	border-left:3px solid gray;
+	line-height:1.2em;
+	overflow:hidden;
+	padding-left:1.2rem;
+	}
+
+
+	.quality_ass
+	{
+	position:absolute;
+	width:20%;
+	height:40%;
+	left:80%;
+	top:30%;
+	font-size:1.4rem;
+	font-family:"Outfit",sans-serif;
+	color:gray;
+	z-index:1;
+	border-left:3px solid gray;
+	line-height:1.2em;
+	overflow:hidden;
+	padding-left:1.2rem;
+	}
+	
+	
+	
+
+	
+
+
+
+
+/* ==== HOW WE WORK MOBILE ==== */
+@media screen and (max-width: 768px) {
+  	.how_we_work{
+	top:115vh;
+	height:50vh;
+	background-size:100% 100%;
+	border-bottom:3px solid darkred;
+	width:100vw;
+	left:1.6%;
+		}
+
+	
+	.work	{
+	position:absolute;
+	width:30%;
+	height:60%;
+	left:2%;
+	top:30%;
+	font-size:0.7rem;
+	font-family:"Outfit",sans-serif;
+	color:gray;
+	z-index:1;
+	line-height:0.5rem;
+	margin:auto;
+		}
+		
+		.work h2
+		{
+		font-size:1rem;
+		color:gray;
+		}
+		
+	.project_eva{
+	position:absolute;
+	width:20%;
+	height:40%;
+	left:34%;
+	top:30%;
+	font-size:0.7rem;
+	font-family:"Outfit",sans-serif;
+	color:gray;
+	z-index:1;
+	border-left:1px solid gray;
+	line-height:0.8em;
+	overflow:hidden;
+	padding-left:0.2rem;
+	}
+
+	.project_exe
+	{
+	position:absolute;
+	width:20%;
+	height:40%;
+	left:56%;
+	top:30%;
+	font-size:0.7rem;
+	font-family:"Outfit",sans-serif;
+	color:gray;
+	z-index:1;
+	border-left:1px solid gray;
+	line-height:0.8em;
+	overflow:hidden;
+	padding-left:0.2rem;
+	}
+
+	.quality_ass
+	{
+	position:absolute;
+	width:20%;
+	height:40%;
+	left:78%;
+	top:30%;
+	font-size:0.7rem;
+	font-family:"Outfit",sans-serif;
+	color:gray;
+	z-index:1;
+	border-left:1px solid gray;
+	line-height:0.8em;
+	overflow:hidden;
+	padding-left:0.2rem;
+	}
+	}
+
+
+/* === WORK TABLET === */
+@media screen and (min-width: 768px)
+ and (max-width: 1024px) {
+	.how_we_work{
+	width:1024px;
+	left:8px;
+	background-size:1007px 100%;
+		}
+
+
+		
+	.work	{
+	position:absolute;
+	width:30%;
+	height:60%;
+	left:2%;
+	top:25%;
+	font-size:1rem;
+	font-family:"Outfit",sans-serif;
+	color:gray;
+	z-index:1;
+	line-height:1rem;
+	margin:auto;
+		}
+	
+		.work h2
+		{
+		color:gray;
+		}
+
+	.project_eva
+	{
+	position:absolute;
+	width:20%;
+	height:40%;
+	left:34%;
+	top:30%;
+	font-size:1rem;
+	font-family:"Outfit",sans-serif;
+	color:gray;
+	z-index:1;
+	border-left:1px solid gray;
+	line-height:1em;
+	overflow:hidden;
+	padding-left:1rem;
+	}
+
+
+	.project_exe
+	{
+	position:absolute;
+	width:20%;
+	height:40%;
+	left:56%;
+	top:30%;
+	font-size:1rem;
+	font-family:"Outfit",sans-serif;
+	color:gray;
+	z-index:1;
+	border-left:1px solid gray;
+	line-height:1em;
+	overflow:hidden;
+	padding-left:1rem;
+	}
+
+	
+	.quality_ass
+	{
+	position:absolute;
+	width:20%;
+	height:40%;
+	left:78%;
+	top:30%;
+	font-size:1rem;
+	font-family:"Outfit",sans-serif;
+	color:gray;
+	z-index:1;
+	border-left:1px solid gray;
+	line-height:1em;
+	overflow:hidden;
+	padding-left:1rem;
+	}
+
+}
+ 
+
+/* === WORK PC === */
+@media screen and (min-width:1025px)and
+	(max-width:1919px){
+	.how_we_work{
+	width:100vw;
+	left:8px;
+	background-size:100% 100%;
+		}
+
+	
+		.work	{
+	position:absolute;
+	width:30%;
+	height:60%;
+	left:2%;
+	top:25%;
+	font-size:1rem;
+	font-family:"Outfit",sans-serif;
+	color:gray;
+	z-index:1;
+	line-height:1.2rem;
+	margin:auto;
+		}
+	
+		.work h2
+		{
+		color:gray;
+		}
+	
+	
+	.project_eva
+	{
+	position:absolute;
+	width:20%;
+	height:40%;
+	left:34%;
+	top:30%;
+	font-size:1rem;
+	font-family:"Outfit",sans-serif;
+	color:gray;
+	z-index:1;
+	border-left:3px solid gray;
+	line-height:1.4rem;
+	overflow:hidden;
+	padding-left:1rem;
+	}
+
+
+	.project_exe
+	{
+	position:absolute;
+	width:20%;
+	height:40%;
+	left:56%;
+	top:30%;
+	font-size:1.2rem;
+	font-family:"Outfit",sans-serif;
+	color:gray;
+	z-index:1;
+	border-left:3px solid gray;
+	line-height:1.4rem;
+	overflow:hidden;
+	padding-left:1em;
+	}
+
+	
+	.quality_ass
+	{
+	position:absolute;
+	width:20%;
+	height:40%;
+	left:79%;
+	top:30%;
+	font-size:1.2rem;
+	font-family:"Outfit",sans-serif;
+	color:gray;
+	z-index:1;
+	border-left:3px solid gray;
+	line-height:1.4rem;
+	overflow:hidden;
+	padding-left:1rem;
+	}
+
+}
+ 
+
+
+
+/* === SERVICES === */
+
+#services-target
+{
+position:absolute;
+width:100%;
+top:300vh;
+background-image:url("images/services_banner.jpg");
+border-bottom:5px solid darkred;
+}
+	
+	.windows-image img
+		{
+		height:100%;
+		width:100%;
+		}
+
+	#solar_services
+		{
+		display:flex;
+		justify-content:center;
+		position:absolute;
+		width:100vw;
+		height:15vh;
+		left:-2vw;
+		}
+
+	#services-target h2
+	{
+	font-size:2rem;
+	}
+
+
+		
+
+	#windows_film
+	{
+	position:absolute;
+	top:18vh;
+	width:20%;
+	height:25%;
+	left:10%;
+	font-weight:700;
+	background:#e8e8e8;
+	border:10px solid white;
+	}
+
+	#security_film
+	{
+	position:absolute;
+	top:18vh;
+	width:20%;
+	height:25%;
+	left:40%;
+	text-align:center;
+	font-family:verdana;
+	font-weight:700;
+	background:blue;
+	border:10px solid white;
+	}
+
+	#decorative_film
+	{
+	position:absolute;
+	top:18vh;
+	width:20%;
+	height:25%;
+	left:70%;
+	text-align:center;
+	font-family:verdana;
+	font-weight:700;
+	background:blue;
+	border:10px solid white;
+	}
+
+	#roller_shades
+	{
+	position:absolute;
+	top:60vh;
+	width:20%;
+	height:25%;
+	left:10%;
+	text-align:center;
+	font-family:verdana;
+	font-weight:700;
+	background:blue;
+	border:10px solid white;
+	}
+
+
+	#windows_covering
+	{	
+	position:absolute;
+	top:60vh;
+	width:20%;
+	height:25%;
+	left:40%;
+	text-align:center;
+	font-family:verdana;
+	font-weight:700;
+	background:blue;;
+	border:10px solid white;
+	}
+
+	#motorized_patio
+	{
+	position:absolute;
+	top:60vh;
+	width:20%;
+	height:25%;
+	left:70%;
+	text-align:center;
+	font-family:verdana;
+	font-weight:700;
+	background:blue;
+	border:10px solid white;
+	}
+
+		#windows_box
+		{
+		position:absolute;
+		top:45vh;
+		width:16%;
+		height:5%;
+		left:12%;
+		text-align:center;
+		font-size:1rem;
+		padding-bottom:0%;
+		font-weight:0;
+		background:transparent;
+		font-family: "Outfit", sans-serif;
+		color:white;
+		}
+
+		#security_box
+		{
+		position:absolute;
+		top:45vh;
+		width:16%;
+		height:5%;
+		left:42%;
+		text-align:center;
+		font-size:1rem;
+		padding-bottom:0%;
+		font-weight:0;
+		background:transparent;
+		font-family: "Montserrat", sans-serif;
+		overflow:none;
+		color:white;
+		}
+
+		#decorative_box
+		{
+		position:absolute;
+		top:45vh;
+		width:16%;
+		height:5%;
+		left:72%;
+		text-align:center;
+		font-size:1rem;
+		padding-bottom:0%;
+		font-weight:0;
+		background:yelloworange;
+		font-family: "Montserrat", sans-serif;
+		overflow:none;
+		color:white;
+		}
+
+		#roller_box
+		{
+		position:absolute;
+		top:86%;
+		width:16%;
+		height:5%;
+		left:12%;
+		text-align:center;
+		font-size:15px;
+		padding-bottom:0%;
+		font-weight:0;
+		background:yelloworange;
+		font-family: "Montserrat", sans-serif;
+		overflow:none;
+		color:white;
+		}
+
+		#wind_box
+		{
+		position:absolute;
+		top:86%;
+		width:16%;
+		height:5%;
+		left:42%;
+		text-align:center;
+		font-size:15px;
+		padding-bottom:0%;
+		font-weight:0;
+		background:yelloworange;
+		font-family: "Montserrat", sans-serif;
+		overflow:none;
+		color:white;
+		}
+
+		#motorized_box
+		{
+		position:absolute;
+		top:86%;
+		width:16%;
+		height:5%;
+		left:72%;
+		text-align:center;
+		font-size:15px;
+		padding-bottom:0%;
+		font-weight:0;
+		background:yelloworange;
+		font-family: "Montserrat", sans-serif;
+		overflow:none;
+		color:white;
+		}
+
+
+/* ==== OUR SERVICES ==== */
+@media screen and (max-width: 768px) {
+  	#services-target{
+	display:flex;
+	position:absolute;
+	justify-content:center;
+	top:160vh;
+        width:100vw;
+	background-size:100% 100vh;
+	height:90vh;
+		}
+		
+		
+	#solar_services
+		{
+		display:flex;
+		justify-content:center;
+		position:absolute;
+		width:100vw;
+		height:5vh;
+		left:-2vw;
+		top:12vh;
+		}
+
+		.h3txt h3
+		{
+		font-size:0.8rem;
+		}
+		
+		#services-target h2{
+		font-size:1rem;
+		}
+
+		#services-target p{
+		font-size:0.6rem;
+		}
+
+
+
+	#services-target div
+		{
+		height:15vh;
+		}
+
+	#windows_film
+	{
+	top:20vh;
+	border:3px solid white;
+	}
+
+	#security_film
+	{	
+	top:20vh;
+	border:3px solid white;
+	}
+
+	#decorative_film
+	{
+	top:20vh;
+	border:3px solid white;
+	}
+
+
+	#roller_shades
+	{
+	top:54vh;
+	border:3px solid white;
+	}
+
+	#windows_covering
+	{	
+	top:54vh;
+	border:3px solid white;
+	}
+
+	#motorized_patio
+	{
+	top:54vh;
+	border:3px solid white;
+	}
+
+		
+		
+		#windows_box
+		{
+		top:35vh;
+		}
+
+		#security_box
+		{
+		top:35vh;
+		}
+
+		#decorative_box
+		{
+		top:35vh;
+		}
+
+			
+
+		#roller_box
+		{
+		
+		top:71vh;
+		
+		
+		}
+
+		#wind_box
+		{
+		
+		top:71vh;
+		
+		}
+
+		#motorized_box
+		{
+		top:71vh;
+		
+		}
+
+}
+
+
+/* === TABLET === */
+@media screen and (min-width: 768px)
+ and (max-width: 1024px) {
+	.services-target{
+	width:1024px;
+	left:8px;
+	background-size:1007px 100%;
+		}
+
+
+
+		#services-target h2{
+		font-size:1.6rem;
+		}
+
+		#services-target p{
+		font-size:0.7rem;
+		}
+
+
+
+	#services-target div
+		{
+		height:15vh;
+		}
+
+	#windows_film
+	{
+	top:20vh;
+	border:3px solid white;
+	}
+
+	#security_film
+	{	
+	top:20vh;
+	border:3px solid white;
+	}
+
+	#decorative_film
+	{
+	top:20vh;
+	border:3px solid white;
+	}
+
+
+	#roller_shades
+	{
+	top:55vh;
+	border:3px solid white;
+	}
+
+	#windows_covering
+	{	
+	top:55vh;
+	border:3px solid white;
+	}
+
+	#motorized_patio
+	{
+	top:55vh;
+	border:3px solid white;
+	}
+
+		
+		
+		#windows_box
+		{
+		top:35vh;
+
+
+		}
+
+		#security_box
+		{
+		top:35vh;
+		}
+
+		#decorative_box
+		{
+		
+		top:35vh;
+		}
+
+			
+
+		#roller_box
+		{
+		
+		top:70vh;
+		}
+
+		#wind_box
+		{
+		top:70vh;
+
+		
+		}
+
+		#motorized_box
+		{
+		top:70vh;
+		
+		}
+}
+
+
+
+/* === SERVICES PC === */
+@media screen and (min-width: 1025px) and (max-width:1919px){
+	#solar_services {
+		display:flex;
+		justify-content:center;
+		align-items:flex-end;
+		left:85px;
+		top:14vh;
+		font-size:1.8rem;
+		width:85vw;
+		height:0vh;
+		padding-bottom:0vh;
+		}
+		
+		
+		#services-target h2{
+		font-size:1.8rem;
+		}
+
+		#services-target p{
+		font-size:1rem;
+		}
+	}	
+
+ 
+
+
